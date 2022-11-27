@@ -1,0 +1,193 @@
+/* Global */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+body {
+  height: 100vh;
+  background: linear-gradient(180deg, #F5F5FA 0%, #F2DAD5 44.15%, #A1ABD6 100%);
+  font-family: 'Poppins';
+}
+button{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
+  gap: 10px;
+  font-family: 'Poppins';
+  width: 10vw;
+  height: 5vh;
+  background: #BB6BD9;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+}
+button:hover{
+  background: #A847CC;
+}
+
+p{
+  width: 40vw;
+  font-style: normal;
+  font-weight: 500;
+  font-size: large;
+  line-height: 27px;
+  color: #959595;
+  }
+/* Header */
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 50px;
+}
+header button{
+  justify-content: center;
+  font-weight: 500;
+  font-size: 20px;  
+  line-height: 18px;
+}
+
+header span{
+  font-weight: 600;
+  font-size: 30px;
+  color: #231D4F;
+}
+/* Main */
+main{
+  height: 100vh;
+  width: 60vw;
+  margin: 0 auto;
+}
+section {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* Card */
+
+.container{
+  display: flex;
+  height: 45vh;
+  width: 60vw;
+  margin-top: 90px;
+  background: rgba(255, 255, 255, 0.64);
+  border-radius: 26px;
+}
+.card{
+position: relative;
+padding: 20px 30px;
+margin: 18px 29px;
+width: 17vw;
+height: 40vh;
+border-radius: 26px;
+line-height: 1.6;
+}
+.card:last-child{
+color: #fff;
+background: #231D4F;
+box-shadow: 0px 42px 34px rgba(82, 67, 194, 0.295755);
+border-radius: 26px;
+}
+.card p{
+  font-size: 30px;
+  width: 15vw;
+  line-height: 22px;
+}
+.card:last-child p, .card:last-child h2, .card:last-child h1{
+  color: #fff;
+}
+.card:last-child button{
+   background: #BB6BD9;
+}
+.card:last-child button:hover{
+  background: #A847CC;
+
+}
+.card button{
+  background: #231D4F;
+  height: 5vh;
+  position: absolute;
+  bottom: 3vh;
+  width: 13vw;
+  font-size: large;
+}
+.card button:hover{
+  background: #A847CC;
+}
+.card h2{
+  color: #231D4F;
+}
+span{
+  color: #959595;
+  font-size: medium;
+}
+
+.checkbox span {
+  margin-left: 5px;
+  font-size: 20px;
+}
+.checkbox label {
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 22px;
+  position: absolute;
+  width: 22px;
+  left: 1.5vw;
+}
+
+.checkbox label:after {
+  border: 2px solid #7B72C1;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 3px;
+  opacity: 1;
+  position: absolute;
+  top: 5px;
+  transform: rotate(-45deg);
+  width: 12px;
+}
+
+.checkbox input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.checkbox input[type="checkbox"]:checked + label {
+  background-color:  rgba(82, 67, 194, 0.15);
+  
+}
+
+.checkbox input[type="checkbox"]:checked + label:after {  
+  opacity: 1;
+}
+
+.card:last-child .checkbox label:after{
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+}
+
+.card:last-child .checkbox label{
+  border: rgba(82, 67, 194, 0.15)
+}
+.popular{
+  color: #BB6BD9;
+  background: #403879;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins';
+  width: 8vw;
+  height: 4vh;
+  border: none;
+  border-radius: 25px;  
+  float: right;
+}

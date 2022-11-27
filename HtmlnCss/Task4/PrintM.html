@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print</title>
+</head>
+<body>
+    <div>
+        <h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        </h1>
+        <h2>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis excepturi voluptatum nobis mollitia 
+        </h2>    
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque unde aliquam ut aut voluptates veritatis, omnis atque. Omnis laboriosam tenetur doloremque sit obcaecati consectetur ipsum suscipit dolores vero, animi sapiente?
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore alias illo laborum corporis odio magni animi velit, officia necessitatibus, quisquam aut expedita in sapiente quae libero tenetur vero laudantium magnam.
+        </p>
+    </div>
+</body>
+<style>
+:root{
+    --green:green;
+    --red:red;
+    --blue:blue;
+    --fonth1:42pt;
+}
+h1{
+    color:var(--green);
+    font-size: var(--fonth1);
+}
+h2{
+    color: var(--red);
+    border: 2px solid var(--red);
+}
+p{
+    color:  var(--blue);
+}
+@media print{
+    h1,h2{
+        position: absolute;
+        border:none;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        color: black;
+    }
+    h2{
+        left: 50%;
+    }
+    p{
+        color: black;
+        float: left;
+        width: 30%;
+    }
+    
+}
+</style>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+</head>
+<body>
+    <div class="container">
+        <div tabindex="0" id="el1"></div>
+        <div id="cont" tabindex="1">
+            <div id="el2"></div>
+            <div id="el3"></div>    
+        </div>
+    </div>
+<style>
+    *{
+        transition: 2s;
+    }
+    .container{
+        position: relative;
+        border: dotted;
+
+        width: 800px;
+        height: 600px;
+        padding: 10px;
+
+    }
+    div>div{
+        background-color: white;
+        position: absolute;
+        height: 100px;
+        width: 100px;
+    }
+    #el1{
+        box-shadow: 0px 0px 10px blue;
+        border: 1px solid blue;
+    }
+    
+    #el2{
+        box-shadow: 1px 1px 10px red;
+        border: 1px solid red;
+        top: 120px;
+        left: 120px;
+    }
+    #cont:focus *{
+        top: 0px;
+    }
+    #cont{
+        height: 0;
+        width: 0;
+        margin-left: -10px;
+        outline: none;
+    }
+    #el3{
+        box-shadow: 1px 1px 10px green;
+        border: 1px solid green;
+        top: 230px;
+        left: 230px;
+    }
+    #el1:hover{
+        background-color: blue;
+    }
+    #el2:hover{
+        background-color: red;
+    }
+    #el3:hover{
+        background-color: green;
+    }
+</style>
+</body>
+</html>

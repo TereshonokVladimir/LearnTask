@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapuva</title>
+</head>
+<body>
+    <div class="face">
+        <div class="ochko"></div>
+        <div class="ochko"></div>
+        <div class="nos-vichko"></div>
+        <div tabindex="1" class="rot-vichko"></div>
+    </div>
+<style>
+*{
+    transition: 2s;
+}
+div>div{
+    position: absolute;
+}
+.face{
+    position: relative;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background-color: darkgoldenrod;
+}
+.ochko{
+    top:25%;
+    left: 25%;
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    z-index: 2;
+}
+.ochko+.ochko{
+    left: 65%
+}
+.nos-vichko{
+    top:50%;
+    left: 50%;
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    border: 100px solid darkgoldenrod ;
+}
+.rot-vichko{
+    top: 50%;
+    right: 50%;
+    background-color: white;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    transform: translate(50%, 50%); 
+}
+.face:hover{
+    transform: rotate(90deg);
+}
+.rot-vichko:focus{
+    transform: rotate(30deg);
+    transform-origin: top;
+
+}
+</style>    
+</body>
+</html>

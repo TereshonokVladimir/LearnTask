@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+</head>
+<body>
+    <div class="task1">
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="c"></div>
+    </div>
+    <div class="task2">
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="c"></div>
+    </div>
+    <div class="task3">
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="c"></div>
+    </div>
+    <div class="task4">
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="c"></div>
+    </div>
+    <div class="task5">
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="c"></div>
+    </div>
+    <div class="task6">
+        <div class="d"></div>
+        <div class="e"></div>
+        <div class="f"></div>
+    </div>
+    <div class="task7">
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="c"></div>
+    </div>
+    <div class="task8">
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="c"></div>
+    </div>
+</body>
+<style>
+body>div{
+    display: grid;
+    /* grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr); */
+    grid-template: repeat(5, 1fr)/repeat(5, 1fr);
+    height: 600px;
+    width: 600px;
+    background-color: blue;
+    margin: 10px;
+    padding: 10px;
+}
+div div{
+    height: 100px;
+    width: 100px;
+    place-self: center;
+    background-color: yellow;
+}
+.a{
+    grid-area: a;
+}
+.b{
+    grid-area: b;
+}
+.c{
+    grid-area: c;
+}
+.task1{
+    grid-template-areas: 
+    "a . . . ."
+    "b . . . ."
+    "c . . . ."
+    ". . . . ."
+    ". . . . .";
+}
+.task2{
+    grid-template-areas: 
+    ". . . . ."
+    "b . . . ."
+    "c . . . ."
+    "a . . . ."
+    ". . . . .";
+}
+.task3{
+    grid-template-areas: 
+    ". . . . ."
+    ". . . . ."
+    "c . b . a"
+    ". . . . ."
+    ". . . . .";
+}
+.task4{
+    grid-template-areas: 
+    ". . . . ."
+    ". . . . ."
+    ". . . . ."
+    ". . . . ."
+    "c . b . a";
+}
+.task5{
+    grid-template-areas: 
+    ". . . . ."
+    ". . . . ."
+    ". . . . c"
+    ". . . . b"
+    ". . . . a";
+}
+.task6{
+    grid-template: 1fr 1fr 1fr/5fr;
+}
+.d,.e,.f{
+    justify-self: start;
+}
+.task7{
+    grid-template-areas: 
+    ". . . . ."
+    ". . . . ."
+    ". c . b a"
+    ". . . . ."
+    ". . . . .";
+}
+.task8{
+    gap: 10px 10px;
+    width: 250px;
+    height: 250px;
+    grid-template-areas: 
+    "a b "
+    "c . ";
+}
+</style>
+</html>

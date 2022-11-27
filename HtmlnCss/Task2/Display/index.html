@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+</head>
+<body>
+    <div class="task1">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="task2">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="task3">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="task4">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="task5">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div tabindex="0" class="task6">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="task7">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="task8">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+<style>
+body>div{
+    display: flex;
+    height: 600px;
+    width: 600px;
+    background-color: blue;
+    margin: 10px;
+}
+div div{
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    margin: 10px;
+}
+.task1{
+    flex-direction: column;
+}
+.task2{
+    flex-direction: column;
+    justify-content: center;
+}
+.task3{
+    justify-content: space-between;
+    align-items: center;
+}
+.task4{
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.task5{
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.task6{
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 2s;
+}
+.task6:focus{
+    justify-content: center;
+}
+.task7{
+    justify-content: space-evenly;
+    align-items: center;
+}
+.task7 div:first-child {
+    margin: auto;
+}
+.task8{
+    flex-wrap: wrap;
+    width: 250px;
+    height: 250px;
+}
+</style>
+</html>

@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body > div {
+    max-width: 1000px;
+}
+button{
+    height: 150px;
+    width: 150px;
+    background-color: aqua;
+}
+button:hover{
+    background-color: grey;
+}
+
+header{
+    background-color: black;
+}
+nav{
+    background-color: aquamarine;
+}
+ul li:last-child{
+    background-color: black;
+}
+a{
+    text-decoration: none;
+}
+div>main:last-of-type{
+    background-color: peru;
+}
+
+main>section{
+    background-color: brown;
+}
+section+section{
+    background-color: green;
+}
+form>div{
+    background-color: blue;
+    display: flex;
+}
+form>div:nth-child(even){
+    background-color: yellow;
+}
+footer :not(div){
+  background-color: grey;
+}
+footer > div+div{
+    background-color: green;
+}
+/* div div div>span:not(span:last-child){
+    background-color: red;
+} */
+
+div div div>span{
+    background-color: red;
+}
+

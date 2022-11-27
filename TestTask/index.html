@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="toggle.css">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <title>Jadwalin</title>
+</head>
+<body>
+  <header>
+    <i>icon</i>
+    <span>
+      <img class="fit-picture"
+      src="/Group.png"
+      alt="OfficialLabel">
+      Jadwalin
+    </span>
+    <button>Join Now</button>
+  </header>
+  <main>
+    <h1>Plans & Pricing</h1>
+    <section>
+      <p>Whether your time-saving automation needs are large or small, we’re here to help you scale.</p>      
+      <div class="check-box">
+        <input type="checkbox" onchange="onChange(this)">
+      </div>
+      </label>
+    </section>
+    <div class="container">
+      <div class="card">
+        <h1 class="card1">$19<span>/month</span></h1>
+        <h2>Starter</h2>
+        <p>Unleash the power of automation.</p>
+        <div class="checkbox">
+          <input type="checkbox" name="Multi-step Zaps" disabled="disabled"  checked>
+          <label for="checkbox"></label>
+          <span for="Multi-step Zaps">Multi-step Zaps</span>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" name="3 Premium Apps" disabled="disabled"  checked>
+          <label for="checkbox"></label>
+          <span for="3 Premium Apps">3 Premium Apps</span>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" name="2 Users team" disabled="disabled"  checked>
+          <label for="checkbox"></label>
+          <span for="2 Users team">2 Users team</span>
+        </div>
+          <button>Choose plan</button>
+        </div>
+      <div class="card">
+        <h1 class="card2">$54<span>/month</span></h1>
+        <h2>Professional</h2>
+        <p>Advanced tools to take your work to the next level.</p>
+        <div class="checkbox">
+          <input type="checkbox" name="Multi-step Zaps" disabled="disabled"  checked>
+          <label for="checkbox"></label>
+          <span for="Multi-step Zaps">Multi-step Zaps</span>
+        </div>  
+        <div class="checkbox">
+          <input type="checkbox" name="Unlimited Premium Apps" disabled="disabled"  checked>
+          <label for="checkbox"></label>
+
+          <span for="Unlimited Premium Apps">Unlimited Premium Apps</span>
+        </div>  
+        <div class="checkbox">
+          <input type="checkbox" name="50 Users team" disabled="disabled"  checked>
+          <label for="checkbox"></label>
+          <span for="50 Users team">50 Users team</span>
+        <div class="checkbox">  
+          <input type="checkbox" name="Shared Workspace" disabled="disabled"  checked>
+          <label for="checkbox"></label>
+          <span for="Shared Workspace">Shared Workspace</span>
+        </div>
+          <button>Choose plan</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="popular">MOST POPULAR</div>
+        <h1 class="card3">$89<span>/month</span></h1>
+        <h2>Starter</h2>
+        <p>Unleash the power of automation.</p>
+        <div class="checkbox">
+          <input type="checkbox" name="Multi-step Zaps" disabled="disabled"  checked>
+          <label for="checkbox"></label>
+          <span for="Multi-step Zaps">Multi-step Zaps</span>
+        </div>
+          <div class="checkbox">
+          <input type="checkbox" name="3 Premium Apps" disabled="disabled"  checked>
+          <label for="checkbox"></label>
+          <span for="3 Premium Apps">3 Premium Apps</span>
+        </div>
+          <div class="checkbox">
+          <input type="checkbox" name="2 Users team" disabled="disabled"  checked>
+          <label for="checkbox"></label>
+          <span for="2 Users team">2 Users team</span>
+          <button>Choose plan</button>
+        </div>
+      </div>
+    </div>
+  </main>
+<script>
+  function onChange(checkboxElem) {
+    if(checkboxElem.checked){
+      document.querySelector('.card1').innerHTML = '$12<span>/month</span>';
+      document.querySelector('.card2').innerHTML = '$36<span>/month</span>';
+      document.querySelector('.card3').innerHTML = '$56<span>/month</span>';
+    } else {
+      document.querySelector('.card1').innerHTML = '$19<span>/month</span>';
+      document.querySelector('.card2').innerHTML = '$54<span>/month</span>';
+      document.querySelector('.card3').innerHTML = '$89<span>/month</span>';
+    }
+
+  }
+</script>
+</body>
+</html>
