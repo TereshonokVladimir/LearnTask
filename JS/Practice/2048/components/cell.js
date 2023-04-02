@@ -3,8 +3,8 @@ export class Cell {
     const cell = document.createElement("div")
     cell.classList.add("cell")
     gridElement.append(cell)
-    this.x = x;
-    this.y = y;
+    this.x = x
+    this.y = y
   }
 
   linkTile(tile) {
@@ -22,7 +22,7 @@ export class Cell {
 
   linkTileForMerge(tile) {
     tile.setXY(this.x, this.y)
-    this.linkTileForMerge = tile
+    this.linkedTileForMerge = tile
   }
   unlinkTileForMerge() {
     this.linkedTileForMerge = null
