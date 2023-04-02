@@ -19,15 +19,8 @@ async function handleInput(event) {
         setupInputOnce()
         return
       }
-      await moveUp();
-      break;
-    case "ArrowRight":
-      if(!canMoveRight()){
-        setupInputOnce()
-        return
-      }
-      await moveRight();
-      break;
+      await moveUp()
+      break
     case "ArrowDown":
       if(!canMoveDown()){
         setupInputOnce()
@@ -42,6 +35,13 @@ async function handleInput(event) {
       }
       await moveLeft();
       break;
+    case "ArrowRight":
+      if(!canMoveRight()){
+        setupInputOnce()
+        return
+      }
+      await moveRight()
+      break
     default:
       setupInputOnce();
       return;
@@ -55,7 +55,7 @@ async function handleInput(event) {
     return
   }
 
-  setupInputOnce();
+  setupInputOnce()
 }
 
 async function moveUp() {
@@ -75,15 +75,13 @@ async function moveRight() {
 async function slideTiles(groupedCells) {
   const promises = []
 
-  groupedCells.forEach(group =>
-    slideTilesInGroup(group, promises))
+  groupedCells.forEach(group => slideTilesInGroup(group, promises))
 
     await Promise.all(promises)
   grid.cells.forEach(cell => {
     cell.hasTileForMerge() && cell.mergeTiles()
   })
-};
-
+}
 
 function slideTilesInGroup(group, promises) {
   for (let i = 1; i < group.length; i++) {
@@ -113,20 +111,19 @@ function slideTilesInGroup(group, promises) {
 
     cellWithTile.unlinkTile()
   }
-
 }
 
 function canMoveUp() {
   return canMove(grid.cellsGroupedByColumn)
 }
 function canMoveDown() {
-  return canMove(grid.cellsGroupedByReversedColumn)
+  return canMove(grid.cellsGroupedByReverseColumn)
 }
 function canMoveLeft() {
   return canMove(grid.cellsGroupedByRow)
 }
 function canMoveRight() {
-  return canMove(grid.cellsGroupedByReversedRow)
+  return canMove(grid.cellsGroupedByReverseRow)
 }
 
 function canMove(groupedCells) {
